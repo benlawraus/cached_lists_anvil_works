@@ -1,0 +1,21 @@
+container: {type: DataRowPanel}
+components:
+- type: Label
+  properties: {}
+  name: label_name
+  layout_properties: {column: DKXOYJ}
+  data_bindings:
+  - {property: text, code: 'self.item[''boat_name'']'}
+- type: Label
+  properties: {}
+  name: label_length
+  layout_properties: {column: TQVDLX}
+  data_bindings:
+  - {property: text, code: 'self.item[''boat_length'']'}
+- type: form:ActionForm
+  properties: {}
+  name: action_form_1
+  layout_properties: {column: FNUOCL}
+  data_bindings:
+  - {property: boat_name, code: 'self.item[''boat_name'']'}
+is_package: true

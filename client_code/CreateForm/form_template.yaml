@@ -1,0 +1,46 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{"SEONUN":45,"LXSPWW":15}'}
+components:
+- type: Label
+  properties: {role: headline, align: left, tooltip: '', border: '', foreground: '',
+    visible: true, text: Add A Sail Boat, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_title
+  layout_properties: {grid_position: 'HPFGXG,SEONUN'}
+- type: Button
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: CANCEL, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_1
+  layout_properties: {grid_position: 'HPFGXG,YQSEJB'}
+  event_bindings: {click: button_cancel_click}
+- type: Button
+  properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+    foreground: '', visible: true, text: SAVE, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: button_save
+  layout_properties: {grid_position: 'HPFGXG,LXSPWW'}
+  event_bindings: {click: button_save_click}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Boat Name,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_name
+  layout_properties: {grid_position: 'ESSZLO,AKWFCC'}
+- type: TextBox
+  properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Length,
+    border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+    font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+    background: '', bold: false, underline: false}
+  name: text_box_length
+  layout_properties: {grid_position: 'KJWKLT,NKFWDM'}
+- type: RepeatingPanel
+  properties: {item_template: CreateForm.ItemTemplate1}
+  name: repeating_panel_1
+  layout_properties: {grid_position: 'IOUHES,AWOLRG'}
+is_package: true

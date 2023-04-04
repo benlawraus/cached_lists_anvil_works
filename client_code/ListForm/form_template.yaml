@@ -1,0 +1,32 @@
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+components:
+- type: DataGrid
+  properties:
+    role: null
+    columns:
+    - {id: DKXOYJ, title: Name, data_key: name}
+    - {id: TQVDLX, title: Length, data_key: length}
+    - {id: FNUOCL, title: Actions, data_key: ''}
+    auto_header: true
+    tooltip: ''
+    border: ''
+    foreground: ''
+    rows_per_page: 20
+    visible: true
+    wrap_on: never
+    show_page_controls: true
+    spacing_above: small
+    spacing_below: small
+    background: ''
+  name: data_grid_sailboats
+  layout_properties: {grid_position: 'ZDUWYM,KIJJKZ'}
+  components:
+  - type: RepeatingPanel
+    properties: {spacing_above: none, spacing_below: none, item_template: ListForm.RowTemplateBoats}
+    name: repeating_panel_boats
+    layout_properties: {}
+    data_bindings: []
+  data_bindings: []
+is_package: true

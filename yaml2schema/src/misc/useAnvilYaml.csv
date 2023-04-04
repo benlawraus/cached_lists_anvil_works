@@ -1,0 +1,16 @@
+INPUT,,,,,OUTPUT,,
+ANVIL,,OPENAPI,,CLASSES,PYDAL,OPENAPI,
+TYPE,NOTE,TYPE,FORMAT,TYPE,TYPE,TYPE,FORMAT
+string,,string,,str,string,string,
+number,,integer,,int,integer,integer,int32
+number,anvil_reduced.yaml,integer,int32,int,integer,integer,int32
+number,anvil_reduced.yaml,integer,int64,int,bigint,integer,int64
+number,anvil_reduced.yaml,number,float,float,double,number,float
+datetime,,string,date-time,datetime,datetime,string,date-time
+date,,string,date,date,date,string,date
+bool,,boolean,,bool,boolean,,
+link_single,,#ref,,class,reference,#ref,
+link_multiple,,array,#ref,List[class],list: reference,array,#ref
+simpleObject,anvil_reduced.yaml,array,integer,List[int],list:integer,array,integer
+simpleObject,anvil_reduced.yaml,array,string,List[str],list:string,array,string
+simpleObject,,object,,"Dict[str,Any]",json,object,
