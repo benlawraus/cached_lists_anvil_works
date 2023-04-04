@@ -1,11 +1,13 @@
 
 Example App using anvil_works_design_test
 ==========================================
-This is a simple example of the [anvil_works_design_test](https://github.com/benlawraus/anvil_works_design_test) module to write, edit, test and debug a
+A self-contained example of the [anvil_works_design_test](https://github.com/benlawraus/anvil_works_design_test) module to write, edit, test and debug an
 [anvil.works](https://anvil.works) application. If you have an 
 account, clone it here:
 
 [cached_lists_anvil_works](https://anvil.works/build#clone:HCI3ZLAYFMXTTBEV=UY765JHOSBBLTQZADVICCZDJ|C6ZZPAPN4YYF5NVJ=)
+
+This repo only illustrates the code-completion and test functions of [anvil_works_design_test](https://github.com/benlawraus/anvil_works_design_test). It does not illustrate normal use. Use [anvil_works_design_test](https://github.com/benlawraus/anvil_works_design_test) scripts instead.
 
 The example website is a simple database of sail boats.  It allows you to Create, Update and Delete sailboats both in
 the database and in the browser's indexedDB storage.
@@ -20,8 +22,10 @@ Install
 
     cd cached_lists_anvil_works
     git remote remove origin
+    # virtual environment
     python3 -m venv ./venv;
     source venv/bin/activate
+    # install dependencies
     pip3 install strictyaml
     pip3 install pyDAL
     pip3 install pytest
@@ -45,16 +49,16 @@ If you open the files in the client_code and server_code directories in the PyCh
     for
     1. your functions and classes
     2. the functions and classes on [anvil.works](https://anvil.works)
-      **As a bonus, Github's co-pilot is also available to help you write your code.**
+      **As a bonus, GitHub's co-pilot is also available to help you write your code.**
 
 Testing
 -------
 The repo contains tests using pytest. Here (heavily commented):
 [tests_project](tests_project)
 
-- These tests were written as the the code was written i.e. Test Driven Development (TDD).
+- These tests were written as the code was written i.e. Test Driven Development (TDD).
 
-- Instantiate a (client_code) form class and use it's methods to click buttons. Use it's attributes to input
+- Instantiate a (client_code) form class and use its methods to click buttons. Use its attributes to input
 into forms.  
 - Call server functions from the client code.
 
