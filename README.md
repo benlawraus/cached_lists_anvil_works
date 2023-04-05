@@ -56,13 +56,13 @@ If you open the files in the client_code and server_code directories in the PyCh
     for
     1. your functions and classes
     2. the functions and classes on [anvil.works](https://anvil.works)
-      **As a bonus, GitHub's co-pilot is also available to help you write your code.**
+    3. **As a bonus, GitHub's co-pilot is also available to help you write your code.**
 
 ### Examples
 
 #### Auto-complete on database tables
 ![alt apptables](tests_project/doc_images/tablelist.png "Options for available tables")
-#### Auto-complete on database tables
+#### Auto-complete on database functions
 ![alt apptables](tests_project/doc_images/databasecommands.png "Database commands")
 #### Auto-complete on anvil.works functions
 ![alt apptables](tests_project/doc_images/queryoptions.png "Query options")
