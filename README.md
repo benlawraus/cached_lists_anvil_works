@@ -20,6 +20,14 @@ Install
 
     git clone https://github.com/benlawraus/cached_lists_anvil_works
 
+The below commands are in [init_project.zsh](init_project.zsh), so after downloading
+the repo, you can run that script to install the dependencies and run the tests.
+
+    chmod +x init_project.zsh
+    ./init_project.zsh
+
+OR run the commands below manually:
+
     cd cached_lists_anvil_works
     git remote remove origin
     # virtual environment
@@ -33,7 +41,6 @@ Install
 
     python3 -m pytest tests_project
 
-The above commands are in [init_project.zsh](init_project.zsh)
 
 
 Illustrates:-
