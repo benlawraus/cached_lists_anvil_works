@@ -30,12 +30,14 @@ class Test_indexed_db_create:
     """The App creates reads updates and deletes boat descriptions in the client."""
 
     def login_user(self):
+        """Log in a user and return the user object."""
         mydal.define_tables_of_db()
         user = new_user_in_db()
         anvil.users.force_login(user)
         return user
 
     def test_get_user(self):
+        """Test that the user is logged in and then logged out."""
         user = self.login_user()
         assert anvil.users.get_user()
         anvil.users.logout()
@@ -46,7 +48,7 @@ class Test_indexed_db_create:
         form_create will contain the boat name and length."""
         # we are adding here, not updating, so blank out the boat name to prevent deletion of previous saved boat
         form_create.sail_boat.name = ''
-        # add boat name and length in the UI
+        # add boat name and length in the form UI
         form_create.text_box_name.text = random_name()
         form_create.text_box_length.text = random_number(size=2)
         # save the UI data to the sail_boat object and the sail_boat_store
