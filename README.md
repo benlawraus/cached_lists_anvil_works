@@ -63,11 +63,11 @@ If you open the files in the client_code and server_code directories in the PyCh
 #### Auto-complete on database tables
 ![alt apptables](tests_project/doc_images/tablelist.png "Options for available tables")
 #### Auto-complete on database functions
-![alt apptables](tests_project/doc_images/databasecommands.png "Database commands")
+![alt database](tests_project/doc_images/databasecommands.png "Database commands")
 #### Auto-complete on anvil.works functions
-![alt apptables](tests_project/doc_images/queryoptions.png "Query options")
+![alt query](tests_project/doc_images/queryoptions.png "Query options")
 #### Auto-complete on forms in client_code
-![alt apptables](tests_project/doc_images/helponforms.png "Form options")
+![alt forms](tests_project/doc_images/helponforms.png "Form options")
 
 
 Testing
@@ -91,4 +91,10 @@ into forms.
 
 ### Example
 See the pytest file [test_020_CRUD.py](tests_project/test_020_CRUD.py)
+
+Issues
+------
+If `server-code` modules cannot see `client_code` modules or vice-versa, the IDE may need to include these in their paths. To do this in PyCharm:
+
+![alt paths](tests_project/doc_images/add_interpreter_paths.gif "Paths")
 
