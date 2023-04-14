@@ -35,7 +35,7 @@ class ListFormTemplate(ColumnPanel):
         self._item = ClassDict()
 
         if properties.get('item', None) is not None:
-            self.item = properties['item']
+            self._item = properties['item']
 
     @property
     def item(self):
