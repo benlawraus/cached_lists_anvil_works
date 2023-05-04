@@ -127,16 +127,23 @@ class CreateFormTemplate(ColumnPanel):
         self._item = ClassDict()
 
         if properties.get('item', None) is not None:
-            self._item = properties['item']
+            self.item = properties['item']
 
-    @property
-    def item(self):
-        return attr_getter(self, 'item')
+    def __getattr__(self, item):
+        '''It seems pycharm runs @property on initialization, so this is the alternative.
+        It is for the attribute self.item.'''
+        if item == 'item':
+            return attr_getter(self, 'item')
+        else:
+            raise AttributeError(f"The attribute {item} is not defined.")
 
-    @item.setter
-    def item(self, some_dict):
-        attr_setter(self, some_dict, 'item')
-        return
+    def __setattr__(self, key, value):
+        '''It seems pycharm runs @property on initialization, so this is the alternative.
+        It is for the attribute self.item.'''
+        if key == 'item':
+            attr_setter(self, value, 'item')
+        else:
+            self.__dict__[key] = value
 
     def init_components(self, **properties):
         CreateFormTemplate.__init__(self, **properties)
